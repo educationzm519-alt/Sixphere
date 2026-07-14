@@ -1,0 +1,423 @@
+/* ==========================================
+   SixMultPhare Education
+   Dashboard Styles
+   Version: 1.0.0
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+:root{
+
+    --primary:#6C4CF1;
+    --primary-dark:#4F2ED9;
+    --secondary:#8B5CF6;
+
+    --white:#ffffff;
+
+    --text:#2d3748;
+    --text-light:#718096;
+
+    --glass:rgba(255,255,255,.18);
+    --border:rgba(255,255,255,.25);
+
+    --shadow:0 15px 35px rgba(0,0,0,.15);
+
+}
+
+body{
+
+    background:linear-gradient(135deg,#5B3DF5,#8B5CF6,#9F67FF);
+
+    min-height:100vh;
+
+    display:flex;
+
+    overflow-x:hidden;
+
+}
+
+/* ===========================
+Sidebar
+=========================== */
+
+.sidebar{
+
+    width:260px;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border-right:1px solid rgba(255,255,255,.2);
+
+    box-shadow:var(--shadow);
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    height:100vh;
+
+    transition:.35s;
+
+    z-index:1000;
+
+}
+
+.sidebar.collapsed{
+
+    width:85px;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    color:#fff;
+
+    padding:30px 15px;
+
+}
+
+.logo ion-icon{
+
+    font-size:34px;
+
+}
+
+.logo h2{
+
+    font-size:22px;
+
+}
+
+.sidebar ul{
+
+    list-style:none;
+
+    padding:10px;
+
+}
+
+.sidebar ul li{
+
+    margin:8px 0;
+
+}
+
+.sidebar ul li a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    text-decoration:none;
+
+    color:#fff;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    transition:.3s;
+
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li.active a{
+
+    background:rgba(255,255,255,.18);
+
+}
+
+.sidebar ion-icon{
+
+    font-size:22px;
+
+}
+
+/* ===========================
+Main
+=========================== */
+
+.main{
+
+    margin-left:260px;
+
+    width:100%;
+
+    padding:30px;
+
+    transition:.35s;
+
+}
+
+.sidebar.collapsed + .main{
+
+    margin-left:85px;
+
+}
+
+/* ===========================
+Header
+=========================== */
+
+header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:30px;
+
+}
+
+header h1{
+
+    color:#fff;
+
+    font-size:32px;
+
+}
+
+.profile{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(255,255,255,.2);
+
+    color:#fff;
+
+    font-size:34px;
+
+}
+
+/* ===========================
+Statistic Cards
+=========================== */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+}
+
+.card{
+
+    background:var(--glass);
+
+    border:1px solid var(--border);
+
+    backdrop-filter:blur(20px);
+
+    -webkit-backdrop-filter:blur(20px);
+
+    border-radius:20px;
+
+    padding:30px;
+
+    color:#fff;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+    animation:fadeIn .7s ease;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.card h3{
+
+    font-size:18px;
+
+}
+
+.card p{
+
+    font-size:38px;
+
+    font-weight:700;
+
+    margin-top:15px;
+
+}
+
+/* ===========================
+Welcome Section
+=========================== */
+
+.welcome{
+
+    margin-top:35px;
+
+    background:var(--glass);
+
+    border:1px solid var(--border);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:20px;
+
+    padding:30px;
+
+    color:#fff;
+
+    box-shadow:var(--shadow);
+
+}
+
+.welcome h2{
+
+    margin-bottom:12px;
+
+}
+
+.welcome p{
+
+    line-height:1.8;
+
+}
+
+/* ===========================
+Animation
+=========================== */
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+transform:translateY(25px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ===========================
+Responsive
+=========================== */
+
+@media(max-width:900px){
+
+.sidebar{
+
+    width:85px;
+
+}
+
+.logo h2{
+
+    display:none;
+
+}
+
+.sidebar ul li a{
+
+    justify-content:center;
+
+}
+
+.sidebar ul li a span{
+
+    display:none;
+
+}
+
+.main{
+
+    margin-left:85px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+header{
+
+    flex-direction:column;
+
+    gap:20px;
+
+    align-items:flex-start;
+
+}
+
+.cards{
+
+    grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.main{
+
+    padding:20px;
+
+}
+
+header h1{
+
+    font-size:26px;
+
+}
+
+.card p{
+
+    font-size:30px;
+
+}
+
+}
