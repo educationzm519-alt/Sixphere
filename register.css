@@ -1,0 +1,248 @@
+/* ==========================================
+   SixMultPhare Education
+   Register Page
+   Modern Glassmorphism UI
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#5B3DF5,#7C4DFF,#8E44AD);
+    overflow:hidden;
+    position:relative;
+}
+
+body::before{
+    content:"";
+    position:absolute;
+    width:350px;
+    height:350px;
+    background:rgba(255,255,255,.15);
+    border-radius:50%;
+    top:-120px;
+    left:-120px;
+    filter:blur(45px);
+}
+
+body::after{
+    content:"";
+    position:absolute;
+    width:320px;
+    height:320px;
+    background:rgba(255,255,255,.12);
+    border-radius:50%;
+    bottom:-120px;
+    right:-120px;
+    filter:blur(45px);
+}
+
+.register-container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+    z-index:10;
+}
+
+.register-card{
+
+    width:100%;
+    max-width:480px;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.2);
+
+    border-radius:25px;
+
+    padding:40px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.25);
+
+    color:#fff;
+
+    animation:fadeIn .8s ease;
+
+}
+
+@keyframes fadeIn{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+.logo{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.logo ion-icon{
+    font-size:70px;
+}
+
+.logo h1{
+    margin-top:10px;
+    font-size:30px;
+}
+
+.logo p{
+    opacity:.8;
+    margin-top:5px;
+}
+
+.input-box{
+
+    display:flex;
+    align-items:center;
+
+    background:rgba(255,255,255,.15);
+
+    margin-bottom:18px;
+
+    padding:15px;
+
+    border-radius:12px;
+
+}
+
+.input-box ion-icon{
+
+    font-size:22px;
+
+    margin-right:12px;
+
+    color:#fff;
+
+}
+
+.input-box input,
+.input-box select{
+
+    width:100%;
+
+    background:none;
+
+    border:none;
+
+    outline:none;
+
+    color:#fff;
+
+    font-size:15px;
+
+}
+
+.input-box input::placeholder{
+
+    color:#eee;
+
+}
+
+.input-box select{
+
+    appearance:none;
+
+    cursor:pointer;
+
+}
+
+.input-box select option{
+
+    color:#222;
+
+}
+
+.register-btn{
+
+    width:100%;
+
+    padding:15px;
+
+    margin-top:10px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#fff;
+
+    color:#5B3DF5;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.register-btn:hover{
+
+    transform:translateY(-3px);
+
+    background:#f4f4f4;
+
+}
+
+.login-link{
+
+    text-align:center;
+
+    margin-top:25px;
+
+}
+
+.login-link a{
+
+    color:#fff;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+}
+
+.login-link a:hover{
+
+    text-decoration:underline;
+
+}
+
+@media(max-width:500px){
+
+.register-card{
+
+    padding:30px 20px;
+
+}
+
+.logo h1{
+
+    font-size:25px;
+
+}
+
+}
