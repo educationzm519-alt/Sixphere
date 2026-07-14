@@ -1,0 +1,97 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+display:flex;
+background:#f4f7fc;
+}
+
+.sidebar{
+width:320px;
+background:linear-gradient(180deg,#5B3DF5,#7C4DFF);
+color:#fff;
+padding:30px;
+min-height:100vh;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+margin-bottom:40px;
+}
+
+.logo ion-icon{
+font-size:40px;
+}
+
+.sidebar ul{
+list-style:none;
+}
+
+.sidebar li{
+margin:15px 0;
+}
+
+.sidebar a{
+display:flex;
+align-items:center;
+gap:12px;
+padding:14px;
+border-radius:12px;
+color:#fff;
+text-decoration:none;
+}
+
+.sidebar a:hover,
+.sidebar .active a{
+background:rgba(255,255,255,.2);
+}
+
+.main{
+flex:1;
+padding:30px;
+overflow-x:auto;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+margin-bottom:30px;
+}
+
+#searchSubject{
+padding:12px;
+width:260px;
+border-radius:10px;
+border:1px solid #ddd;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+background:#fff;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+
+th{
+background:#5B3DF5;
+color:#fff;
+padding:15px;
+}
+
+td{
+padding:15px;
+text-align:center;
+border-bottom:1px solid #eee;
+}
+
+tr:hover{
+background:#f7f4ff;
+  }
