@@ -1,0 +1,66 @@
+/* ==========================================
+   SixMultPhare Education
+   Login Page
+   Modern Glassmorphism UI
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#5B3DF5,#7C4DFF,#8E44AD);
+    overflow:hidden;
+    position:relative;
+}
+
+/* Background Blur Circles */
+
+body::before{
+    content:"";
+    position:absolute;
+    width:350px;
+    height:350px;
+    background:#ffffff30;
+    border-radius:50%;
+    top:-120px;
+    left:-120px;
+    filter:blur(40px);
+}
+
+body::after{
+    content:"";
+    position:absolute;
+    width:320px;
+    height:320px;
+    background:#ffffff20;
+    border-radius:50%;
+    bottom:-120px;
+    right:-120px;
+    filter:blur(40px);
+}
+
+.login-container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+    z-index:2;
+}
+
+.login-card{
+
+    width:100%;
+    max-width:430px;
+
+    background:rgba(255,255,255,.15);
+
+    border:1px solid rgba(255,255,255,.2);
