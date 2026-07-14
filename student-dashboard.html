@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Student Dashboard | SixMultPhare Education</title>
+
+<!-- Google Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Ionicons -->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+
+background:#f4f7ff;
+display:flex;
+min-height:100vh;
+
+}
+
+/* Sidebar */
+
+.sidebar{
+
+width:260px;
+background:linear-gradient(180deg,#5B3DF5,#7B4DFF);
+color:white;
+padding:25px;
+position:fixed;
+top:0;
+left:0;
+bottom:0;
+
+}
+
+.logo{
+
+display:flex;
+align-items:center;
+gap:10px;
+margin-bottom:40px;
+
+}
+
+.logo ion-icon{
+
+font-size:40px;
+
+}
+
+.logo h2{
+
+font-size:24px;
+
+}
+
+.menu{
+
+list-style:none;
+
+}
+
+.menu li{
+
+margin:18px 0;
+
+}
+
+.menu a{
+
+color:white;
+text-decoration:none;
+display:flex;
+align-items:center;
+gap:12px;
+padding:12px;
+border-radius:10px;
+transition:.3s;
+
+}
+
+.menu a:hover{
+
+background:rgba(255,255,255,.15);
+
+}
+
+.menu ion-icon{
+
+font-size:22px;
+
+}
+
+/* Main */
+
+.main{
+
+margin-left:260px;
+width:100%;
+padding:30px;
+
+}
+
+/* Header */
+
+.header{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:30px;
+
+}
+
+.header h1{
+
+color:#333;
+
+}
+
+.profile{
+
+display:flex;
+align-items:center;
+gap:10px;
+
+}
+
+.profile img{
+
+width:50px;
+height:50px;
+border-radius:50%;
+
+}
+
+.profile ion-icon{
+
+font-size:45px;
+color:#5B3DF5;
+
+}
+
+/* Cards */
+
+.cards{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+
+}
+
+.card{
+
+background:white;
+border-radius:20px;
+padding:25px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-5px);
+
+}
+
+.card ion-icon{
+
+font-size:40px;
+color:#5B3DF5;
+margin-bottom:10px;
+
+}
+
+.card h3{
+
+margin-bottom:10px;
+
+}
+
+.card p{
+
+font-size:30px;
+font-weight:bold;
+color:#5B3DF5;
+
+}
+
+/* Course Section */
+
+.section{
+
+margin-top:35px;
+
+}
+
+.section h2{
+
+margin-bottom:20px;
+color:#333;
+
+}
+
+.course-box{
+
+background:white;
+padding:20px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.course{
+
+display:flex;
+justify-content:space-between;
+padding:15px 0;
+border-bottom:1px solid #eee;
+
+}
+
+.course:last-child{
+
+border-bottom:none;
+
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.sidebar{
+
+width:80px;
+
+}
+
+.logo h2{
+
+display:none;
+
+}
+
+.menu a span{
+
+display:none;
+
+}
+
+.main{
+
+margin-left:80px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+.header{
+
+flex-direction:column;
+align-items:flex-start;
+gap:15px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- Sidebar -->
+
+<div class="sidebar">
+
+<div class="logo">
+
+<ion-icon name="school"></ion-icon>
+
+<h2>SixMultPhare</h2>
+
+</div>
+
+<ul class="menu">
+
+<li><a href="#"><ion-icon name="home-outline"></ion-icon><span>Dashboard</span></a></li>
+
+<li><a href="#"><ion-icon name="book-outline"></ion-icon><span>My Courses</span></a></li>
+
+<li><a href="#"><ion-icon name="document-text-outline"></ion-icon><span>Assignments</span></a></li>
+
+<li><a href="#"><ion-icon name="calendar-outline"></ion-icon><span>Timetable</span></a></li>
+
+<li><a href="#"><ion-icon name="bar-chart-outline"></ion-icon><span>Results</span></a></li>
+
+<li><a href="#"><ion-icon name="notifications-outline"></ion-icon><span>Notifications</span></a></li>
+
+<li><a href="#"><ion-icon name="chatbubble-outline"></ion-icon><span>Messages</span></a></li>
+
+<li><a href="#"><ion-icon name="person-outline"></ion-icon><span>Profile</span></a></li>
+
+<li><a href="#"><ion-icon name="log-out-outline"></ion-icon><span>Logout</span></a></li>
+
+</ul>
+
+</div>
+
+<!-- Main Content -->
+
+<div class="main">
+
+<div class="header">
+
+<h1>Welcome Back 👋</h1>
+
+<div class="profile">
+
+<ion-icon name="person-circle"></ion-icon>
+
+</div>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<ion-icon name="book"></ion-icon>
+
+<h3>Courses</h3>
+
+<p>6</p>
+
+</div>
+
+<div class="card">
+
+<ion-icon name="document"></ion-icon>
+
+<h3>Assignments</h3>
+
+<p>3</p>
+
+</div>
+
+<div class="card">
+
+<ion-icon name="school"></ion-icon>
+
+<h3>Results</h3>
+
+<p>12</p>
+
+</div>
+
+<div class="card">
+
+<ion-icon name="notifications"></ion-icon>
+
+<h3>Notifications</h3>
+
+<p>5</p>
+
+</div>
+
+</div>
+
+<div class="section">
+
+<h2>My Courses</h2>
+
+<div class="course-box">
+
+<div class="course">
+
+<span>Mathematics</span>
+
+<strong>In Progress</strong>
+
+</div>
+
+<div class="course">
+
+<span>Physics</span>
+
+<strong>Completed</strong>
+
+</div>
+
+<div class="course">
+
+<span>English</span>
+
+<strong>In Progress</strong>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
