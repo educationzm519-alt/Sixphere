@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Profile | SixMultPhare Education</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/profile.css">
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<div class="logo">
+<ion-icon name="school-outline"></ion-icon>
+<h2>SixMultPhare</h2>
+</div>
+
+<ul>
+
+<li><a href="student-dashboard.html"><ion-icon name="home-outline"></ion-icon> Dashboard</a></li>
+
+<li><a href="courses.html"><ion-icon name="book-outline"></ion-icon> Courses</a></li>
+
+<li><a href="assignments.html"><ion-icon name="document-text-outline"></ion-icon> Assignments</a></li>
+
+<li><a href="timetable.html"><ion-icon name="calendar-outline"></ion-icon> Timetable</a></li>
+
+<li><a href="results.html"><ion-icon name="bar-chart-outline"></ion-icon> Results</a></li>
+
+<li class="active"><a href="profile.html"><ion-icon name="person-outline"></ion-icon> Profile</a></li>
+
+</ul>
+
+</div>
+
+<div class="main">
+
+<h1>Student Profile</h1>
+
+<div class="profile-card">
+
+<div class="profile-image">
+
+<ion-icon name="person-circle-outline"></ion-icon>
+
+</div>
+
+<form id="profileForm">
+
+<input type="text" id="fullname" placeholder="Full Name">
+
+<input type="email" id="email" placeholder="Email" readonly>
+
+<input type="text" id="phone" placeholder="Phone Number">
+
+<input type="text" id="school" placeholder="School">
+
+<input type="text" id="grade" placeholder="Grade">
+
+<button type="submit">Save Profile</button>
+
+</form>
+
+</div>
+
+</div>
+
+<script type="module" src="js/profile.js"></script>
+
+</body>
+  </html>
